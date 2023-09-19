@@ -198,3 +198,14 @@ header {
     padding: 20px;
     margin-top: 25px;
 }
+
+.confirmation-msg {
+    display: none;
+    width: 450px;
+    background-color: #ddf8eb;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    padding: 30px;
+    font-weight: 400;
+    font-size: 32px;
+}

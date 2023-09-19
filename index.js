@@ -4,6 +4,8 @@ const purchaseItemsContainer = document.getElementById('purchase-items-container
 const totalPrice = document.getElementById('total-price')
 const orderContainer = document.getElementById('order-container')
 const payModal = document.getElementById('pay-modal')
+const itemContainer = document.getElementById('item-container')
+const confirmationMessage = document.getElementById('confirmation-msg')
 let order = []
 
 renderItems()
@@ -21,17 +23,27 @@ document.addEventListener('click', (evt) => {
         payModal.style.display = "flex"
     } else if (evt.target.id === "confirm-pay-btn") {
         evt.preventDefault()
-        const formData = new FormData(payModal)
-        const name = formData.get("fullName")
-        const cardNumber = formData.get("cardNumber")
-        const CVV = formData.get("cvv")
-        console.log(name, cardNumber, CVV)
-        payModal.style.display = "none"
-        order = []
-        renderItems()
-        payModal.reset()
+        if (payModal.checkValidity()) {
+            const formData = new FormData(payModal)
+            const name = formData.get("fullName")
+            const cardNumber = formData.get("cardNumber")
+            const CVV = formData.get("cvv")
+            console.log(name, cardNumber, CVV)
+            payModal.style.display = "none"
+            order = []
+            renderItems()
+            payModal.reset()
+            showConfirmation(name)
+        } else { payModal.reportValidity() }
+
     }
 })
+
+function showConfirmation(name) {
+    const message = `Thanks, ${name}! Your order is on its way!`
+    confirmationMessage.innerText = message
+    confirmationMessage.style.display = "block"
+}
 
 function renderOrder() {
 
@@ -60,7 +72,7 @@ function renderOrder() {
 
 
 function renderItems() {
-    document.getElementById('item-container').innerHTML = getItemsHtml()
+    itemContainer.innerHTML = getItemsHtml()
     renderOrder()
 }
 
