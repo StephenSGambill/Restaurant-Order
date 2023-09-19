@@ -1,3 +1,200 @@
 body {
     margin: 0;
-} 
+    font-family: 'Smythe', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 600px;
+    position: relative;
+}
+
+.hero-img {
+    background-image: cover;
+}
+
+.hero-title {
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    color: white;
+}
+
+.hero-tag {
+    font-size: 23px;
+    position: absolute;
+    top: 65px;
+    left: 40px;
+    color: white;
+}
+
+.container {
+    width: 600px;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-card {
+    display: flex;
+    border-bottom: 1px solid rgb(198, 195, 195);
+    padding: 20px;
+    align-items: center;
+    height: 100px;
+    margin: 0 46px;
+}
+
+.emoji {
+    text-align: center;
+    font-size: 79px;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-left: 20px;
+}
+
+.item-name {
+    font-size: 28px;
+}
+
+.item-ingredients {
+    font-size: 16px;
+    color: #8B8B8B;
+}
+
+.item-price {
+    font-size: 20px;
+}
+
+
+.add-btn {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 60px;
+    position: relative;
+}
+
+.elipse {
+    height: 50px;
+    position: absolute;
+}
+
+.add-btn p {
+    margin-left: 20px;
+    margin-top: 16px;
+}
+
+.order-container {
+    display: none;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 0 46px;
+}
+
+.order-heading {
+    text-align: center;
+    font-size: 28px;
+}
+
+.purchase-items-container {
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.purchase-card {
+    display: flex;
+    position: relative;
+    margin-top: 10px;
+}
+
+.purchase-item-name,
+.total-heading {
+    font-size: 28px;
+}
+
+.purchase-item-price,
+.total-price {
+    font-size: 20px;
+}
+
+.purchase-item-price {
+    position: absolute;
+    right: 0;
+}
+
+.remove-btn {
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    background: none;
+    color: rgb(197, 194, 194);
+    font-size: 12px;
+
+}
+
+.order-total {
+    display: flex;
+    border-top: 1px solid black;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total-heading {
+    font-size: 28px;
+    padding-top: 10px;
+}
+
+.complete-btn {
+    background-color: #16DB99;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-top: 54px;
+    margin-bottom: 40px;
+    color: white;
+    display: block;
+}
+
+.pay-modal {
+    display: none;
+    flex-direction: column;
+    width: 524px;
+    height: 400px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 240px;
+    left: 210px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 4px;
+    font-size: 20px;
+    box-shadow: 30px 30px 100px, -30px -30px 100px;
+}
+
+.modal p {
+    margin-bottom: 40px;
+}
+
+.input {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.confirm-pay-btn {
+    background-color: #16DB99;
+    border: none;
+    color: white;
+    padding: 20px;
+    margin-top: 25px;
+}
