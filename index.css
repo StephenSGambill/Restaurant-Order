@@ -168,14 +168,15 @@ header {
     display: none;
     flex-direction: column;
     width: 524px;
-    height: 400px;
+    height: 450px;
     background-color: white;
     color: black;
     padding: 10px;
     text-align: center;
     position: fixed;
     top: 240px;
-    left: 210px;
+    left: auto;
+    right: auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 4px;
     font-size: 20px;
@@ -197,6 +198,15 @@ header {
     color: white;
     padding: 20px;
     margin-top: 25px;
+}
+
+.cancel-modal-btn {
+    background-color: #f8ecb6;
+    border: none;
+    color: rgb(246, 143, 143);
+    padding: 20px;
+    width: 200px;
+    margin: 10px auto 0 auto;
 }
 
 .confirmation-msg {

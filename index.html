@@ -37,9 +37,12 @@
     <form id="pay-modal" class="pay-modal">
         <p>Enter card details</p>
         <input type="text" class="full-name input" name="fullName" placeholder="Enter your name" required>
-        <input type="text" class="card-number input" name="cardNumber" placeholder="Enter card number" required>
-        <input type="text" class="cvv input" name="cvv" placeholder="Enter CVV" required>
+        <input type="text" class="card-number input" name="cardNumber" placeholder="Enter card number" required
+            pattern="^[0-9]{16}$" title="Please enter a valid 16-digit card number">
+        <input type="text" class="cvv input" name="cvv" placeholder="Enter CVV" required pattern="^[0-9]{3}$"
+            title="Please enter a valid 3 digit CVV">
         <input type="submit" class="confirm-pay-btn" id="confirm-pay-btn" value="Pay">
+        <button class="cancel-modal-btn" id="cancel-modal-btn">Cancel</button>
     </form>
     <script src="index.js" type="module"></script>
 </body>
