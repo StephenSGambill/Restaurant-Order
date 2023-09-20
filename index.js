@@ -95,9 +95,8 @@ function getItemsHtml() {
             }</div >
             <div class="item-price">$${item.price}</div>
             </div >
-            <div class="add-btn" id="add-btn" >
-                <img src="/images/ellipse.png" class="ellipse" data-add="${item.id}"/>
-                <p>+</p>
+            <div  id="add-btn" >
+                <p class="add-btn" data-add="${item.id}">+<p>
             </div>
         </div > `
     })
